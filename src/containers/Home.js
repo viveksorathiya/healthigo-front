@@ -63,7 +63,7 @@ const Home = () => {
 	const handleChange = (e) => {
 		axios
 			.get(
-				`http://api.weatherapi.com/v1/search.json?key=6de79738779f43db88760324213003&q=${e.target.value}`
+				`https://api.weatherapi.com/v1/search.json?key=6de79738779f43db88760324213003&q=${e.target.value}`
 			)
 			.then((res) => {
 				setLocations(res.data);
