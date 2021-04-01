@@ -1,8 +1,7 @@
 import React from "react";
+import { Edit } from "@material-ui/icons";
 import "./styles.css";
-// import weather from 'weather-js'
-
-const Weather = ({ weather, location }) => {
+const Weather = ({ weather, location, handleEdit }) => {
 	const getImage = (code) => {
 		switch (code) {
 			case 1000:
@@ -69,7 +68,12 @@ const Weather = ({ weather, location }) => {
 			return (
 				<>
 					<div className="weather_header">
-						<h2>{location.name}</h2>
+						<h2>
+							{location.name}{" "}
+							<a onClick={handleEdit}>
+								<Edit style={{ color: "#000" }} />
+							</a>
+						</h2>
 						<h1>{weather.temp_c}° C</h1>
 						<h3>{weather.condition.text}</h3>
 					</div>
@@ -83,7 +87,22 @@ const Weather = ({ weather, location }) => {
 				</>
 			);
 		}
-		return <div></div>;
+		return (
+			<div>
+				<button
+					onClick={handleEdit}
+					style={{
+						background: "#fff",
+						border: "none",
+						height: "40px",
+						borderRadius: "15px",
+						fontWeight: "600",
+					}}>
+					Edit Location
+				</button>
+				<h2>Fetching Location...</h2>
+			</div>
+		);
 	};
 
 	return (
