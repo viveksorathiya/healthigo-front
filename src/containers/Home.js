@@ -8,7 +8,6 @@ import {
 	DialogActions,
 	DialogContent,
 	DialogTitle,
-	DialogContentText,
 	TextField,
 	Button,
 } from "@material-ui/core";
@@ -71,18 +70,6 @@ const Home = () => {
 			})
 			.catch((err) => {});
 	};
-
-	// useEffect(() => {
-	// 	navigator.geolocation.getCurrentPosition(
-	// 		(position) => {
-	// 			setLat(position.coords.latitude);
-	// 			setLong(position.coords.longitude);
-	// 		},
-	// 		(err) => {},
-	// 		{ enableHighAccuracy: true }
-	// 	);
-	// 	return () => {};
-	// }, []);
 
 	useEffect(() => {
 		if (lat !== "" && long !== "") {
