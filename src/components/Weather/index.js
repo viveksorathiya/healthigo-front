@@ -70,7 +70,7 @@ const Weather = ({ weather, location, handleEdit }) => {
 					<div className="weather_header">
 						<h2>
 							{location.name}{" "}
-							<Edit onClick={handleEdit} style={{ color: "#000" }} />
+							<Edit onClick={handleEdit} style={{ color: weather.is_day === 0 ? '#fff' : '#000' }} />
 						</h2>
 						<h1>{weather.temp_c}° C</h1>
 						<h3>{weather.condition.text}</h3>
