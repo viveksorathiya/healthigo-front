@@ -4,7 +4,7 @@ import "./styles.css";
 const Ticker = () => {
 	return (
 		<div className="ticker">
-			<div className="gradient-border">Made with ❤️ by&nbsp;<a href="#">Vivek Sorathiya</a></div>
+			<div className="gradient-border">Made with ❤️ by&nbsp;<a href="https://linkedin.com/in/viveksorathiya">Vivek Sorathiya</a></div>
 		</div>
 	);
 };

@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 import "./styles.css";
 // import weather from 'weather-js'
 
-const Weather = ({weather, location}) => {
-	
-
+const Weather = ({ weather, location }) => {
 	const getImage = (code) => {
 		switch (code) {
 			case 1000:
@@ -37,8 +34,6 @@ const Weather = ({weather, location}) => {
 				return "/snowflake.png";
 			case 1135:
 				return "/storm.png";
-			case 1135:
-				return "/storm.png";
 			case 1147:
 				return "/storm.png";
 			case 1150:
@@ -65,6 +60,8 @@ const Weather = ({weather, location}) => {
 				return "/rainy.png";
 			case 1204:
 				return "/rainy.png";
+			default:
+				return "";
 		}
 	};
 	const renderWeather = () => {

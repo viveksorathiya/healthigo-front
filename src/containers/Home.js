@@ -11,7 +11,7 @@ const Home = () => {
 	const [long, setLong] = useState("");
 	const [location, setLocation] = useState("");
 	const [weather, setWeather] = useState("");
-	const [city, SetCity] = useState("");
+	// const [city, SetCity] = useState("");
 	useEffect(() => {
 		navigator.geolocation.getCurrentPosition(
 			(position) => {
@@ -37,7 +37,7 @@ const Home = () => {
 				.catch((err) => {});
 		}
 		return () => {};
-	}, [lat, long, city]);
+	}, [lat, long]);
 
 	return (
 		<>

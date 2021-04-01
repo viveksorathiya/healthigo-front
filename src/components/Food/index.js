@@ -42,6 +42,7 @@ const Food = ({ weather }) => {
 				return "Tea Time | Milk: ~50ml, Fruit: 100g";
 			case "Dinner":
 				return "Dinner Time | Milk: ~50ml, Cereals: ~120g, Vegetables: ~150g, Pulses: ~20g, Meat/Egg/Seafood: ~50g";
+			default: return ''
 		}
 	};
 
