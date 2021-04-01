@@ -41,7 +41,7 @@
 .title {
 	font-size: 1.1rem;
 	font-weight: 600;
-	line-height: 0.5rem;
+	line-height: 1rem;
 }
 
 .category {
@@ -73,7 +73,7 @@ h5 {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 	.grid-item .image img {
-		height: 180px;
+		height: 170px;
 		width: 100%;
 	}
 	h5 {
