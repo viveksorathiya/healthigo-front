@@ -1,0 +1,17 @@
+.container {
+    height: calc(100vh - 60px);
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 60px;
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
