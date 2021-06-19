@@ -26,14 +26,13 @@ const Home = () => {
 	const [open, setOpen] = React.useState(true);
 	const [locations, setLocations] = React.useState([]);
 
-
 	const handleClose = () => {
 		setOpen(false);
 	};
 
 	const handleEdit = () => {
-		setOpen(true)
-	}
+		setOpen(true);
+	};
 
 	const handleSubmit = () => {
 		axios
@@ -57,8 +56,8 @@ const Home = () => {
 			(err) => {},
 			{ enableHighAccuracy: true }
 		);
-		handleClose()
-	}
+		handleClose();
+	};
 
 	const handleChange = (e) => {
 		axios
@@ -94,7 +93,12 @@ const Home = () => {
 				aria-labelledby="form-dialog-title">
 				<DialogTitle id="form-dialog-title">Search Location</DialogTitle>
 				<DialogContent>
-					<div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+					<div
+						style={{
+							display: "flex",
+							justifyContent: "space-between",
+							alignItems: "center",
+						}}>
 						<Autocomplete
 							id="country-select-demo"
 							style={{ width: 300 }}
@@ -114,7 +118,7 @@ const Home = () => {
 								/>
 							)}
 						/>
-						<LocationSearching onClick={fetchLocation} />
+						<LocationSearching onClick={fetchLocation} style={{ margin: 10 }} />
 					</div>
 				</DialogContent>
 				<DialogActions>
@@ -124,7 +128,11 @@ const Home = () => {
 			</MUIDialog>
 			<Navbar />
 			<div className="container">
-				<Weather weather={weather} location={location} handleEdit={handleEdit} />
+				<Weather
+					weather={weather}
+					location={location}
+					handleEdit={handleEdit}
+				/>
 				<Food weather={weather} />
 			</div>
 			<Ticker />
