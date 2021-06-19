@@ -48,8 +48,9 @@ const Food = ({ weather }) => {
 
 	return (
 		<div className="food_container">
-			<h1>Curated Suggestions For You</h1>
-			<h5>{getData(type)}</h5>
+		<h5>{getData(type)}</h5>	
+<h1>Curated Suggestions For You</h1>
+			
 			{foods.length !== 0 ? (
 				<div className="grid">
 					{foods.map((food) => (
